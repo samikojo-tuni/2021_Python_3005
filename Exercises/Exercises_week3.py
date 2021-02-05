@@ -35,17 +35,46 @@ print(result)
 # Laske montako parillista ja paritonta numeroa listassa (tai tuplessa) on.
 numbers = (3, 1, 6, 3, 4, 7, 0, 6, 3, 2, 6, 8, 3)
 
+odd = 0
+even = 0
+for num in numbers:
+  if num % 2 == 0:
+    even += 1
+  else:
+    odd += 1
+print("Even:", even, "Odd:", odd)
+
 # Harjoitus 4:
 # Pyydä käyttäjää syöttämään sanoja, kunnes käyttäjä syöttää sanan "stop".
 # Lopuksi tulosta kaikki käyttäjän syöttämät sanat (paitsi "stop").
+word = ""
+word_list = []
+stop_word = "stop"
 
+print("Syötä sanoja. Anna sana \"stop\" kun haluat lopettaa")
+while word.lower() != stop_word:
+  word = input()
+  if word.lower() != stop_word:
+    word_list.append(word)
+
+print(word_list)
 
 # Harjoitus 5:
 # Pyydä käyttäjää syöttämään, monenko luvun keskiarvon tämä haluaa laskea.
 # Tämän jälkeen pyydä käyttäjää syöttämään näin monta lukua.
 # Laske lopuksi lukujen keskiarvo ja tulosta tämä käyttäjälle
 # num = int(input("Syötä numero "))
+sum = 0.0
 
+print("Lasketaan keskiarvo. Monenko luvun keskiarvon haluat laskea?")
+count = int(input())
+
+for x in range(count):
+  number = float(input("Syötä numero "))
+  sum += number
+
+average = sum / count  # Huom! Nollalla jako rikkoo tämän!
+print(average)
 
 # Harjoitus 6
 # Pyydä käyttäjää syöttämään sana. Laske montako kertaa eri kirjaimet esiintyvät sanassa.
@@ -55,3 +84,12 @@ numbers = (3, 1, 6, 3, 4, 7, 0, 6, 3, 2, 6, 8, 3)
 # { "t": 2, "i": 1, "e": 2, "o": 1, "k": 1, "n": 1 }
 # Vihje: operaattorit in ja not in
 # Mietittäväksi: mikä tietorakenne sopii ratkaisuun?
+word = input("Syötä sana > ")
+char_counts = {}
+for char in word:
+  char = char.lower()
+  if char not in char_counts:
+    char_counts[char] = 0
+  char_counts[char] += 1
+
+print(char_counts)
