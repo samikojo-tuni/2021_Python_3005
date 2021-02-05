@@ -1,0 +1,27 @@
+Asenna ja konfiguroi autopep8
+- https://pypi.org/project/autopep8/
+- Päivitä pip (Pythonin pakettienhallintatyökalu)
+  - python -m pip install --upgrade pip
+	- saattaa vaatia pääkäyttäjän oikeudet
+- Asenna autopep8
+  - python -m pip install --upgrade autopep8
+	- jos ei pääkäyttäjän oikeuksia, lisää --user parametri
+- Konfiguroi VS Code:n settings.json
+  - polku: %APPDATA%\Code\User\settings.json
+	- lisää seuraavat rivit:
+
+"python.formatting.provider": "autopep8",
+"python.formatting.autopep8Args": [
+	"--max-line-length",
+  "120",
+  "--indent-size",
+  "2",
+  "--ignore",
+  "E121,E302",
+],
+"[python]": {
+  "editor.insertSpaces": true,
+}
+
+- Käynnistä VS Code uudelleen
+- Kooditiedoston formatointi: Alt+Shift+F
