@@ -16,7 +16,7 @@ def main():
 
   numbers = [1, 2, 3, 4, 5]
   # print("Muuttuja ennen:", isAverageRun)
-  avg = average(numbers, False)
+  avg = average(numbers)
   # print("Muuttuja jälkeen", isAverageRun)
 
   # Funktion sisällä määritetyt muuttujat eivät toimi funktion ulkopuolella
@@ -28,6 +28,7 @@ def main():
   avg = average(numbers2, False)
 
   print("Keskiarvo:", avg)
+
 
 # Python tukee parametrien oletusarvoja. Parametrin oletusarvoa käytetään, jos sille
 # ei ole määritetty arvoa funktiota kutsuttaessa.
@@ -49,13 +50,16 @@ def average(numbers, printResult: bool = True):
   # siihen päästään käsiksi myös silmukan ulkosuolella
   # print(index)
 
-  average = result / len(numbers)
+  length = len(numbers)
+  average = result / length
 
   if printResult:
     print(average)
 
   return average  # Funktion paluuarvo eli output. Funktion kutsuja voi käyttää tätä arvoa
 
+
+avg = average([1, 2, 3, 4])
 
 # Python ei tue main-funktiota, mutta alla olevan määrityksen avulla voimme toteuttaa sitä
 # vastaavan toiminnallisuuden
