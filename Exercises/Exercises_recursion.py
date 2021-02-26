@@ -6,6 +6,8 @@ F(n) = 0, kun n = 0
 F(n) = 1, kun n = 1
 F(n) = F(n-1) + F(n-2), kun n > 1
 Lähde: https://fi.wikipedia.org/wiki/Fibonaccin_lukujono
+
+Ratkaisu voi olla helpompi, jos jaat sen useampaan funktioon.
 '''
 
 
@@ -20,6 +22,7 @@ Esim. luvun 10253 tulos on 5 ja luvun 42 tulos on 2.
 Harjoitus 3
 Alla oleva funktio tarkistaa, onko sana palindromi. Kirjoita funktiosta rekursiivinen versio.
 Ratkaisu voi olla helpompi, jos jaat sen useampaan funktioon.
+
 def isPalindrome(word):
    word = word.lower()
 
