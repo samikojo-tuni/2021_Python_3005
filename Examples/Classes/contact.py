@@ -12,6 +12,9 @@ class Contact:
     # f-string formatoi stringin siten, että {} sisällä oleva muuttuja korvataan muuttujan arvolla
     return f"{self.first_name} {self.last_name}, p. {self.phone}"
 
+  def ToCSV(self, sep=","):
+    return f"{self.first_name}{sep}{self.last_name}{sep}{self.phone}{sep}{self.birth_year}"
+
   def Age(self):
     current_year = datetime.now().year
     age = current_year - self.birth_year

@@ -4,7 +4,7 @@ from student import Student
 from teacher import Teacher
 
 def main():
-  phonebook = PhoneBook()
+  phonebook = PhoneBook("Python-3005/Examples/Classes/contacts.csv")
 
   person1 = Contact("Maija", "Meikäläinen", "123456789", 1990)
   person2 = Contact("Matti", "Meikäläinen", "987654321", 1991)
@@ -17,6 +17,8 @@ def main():
   phonebook.AddContact(person4)
 
   phonebook.PrintContacts()
+
+  phonebook.SaveContacts()
 
 
 if __name__ == "__main__":
