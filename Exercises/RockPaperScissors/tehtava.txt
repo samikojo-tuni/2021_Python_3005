@@ -1,0 +1,42 @@
+Kivi - Paperi - Sakset
+
+Harjoitus toteutetaan kotona ja sen voi toteuttaa yhdessä valmennustiimin kanssa.
+Palautus ennen ensi viikon tuntia. Käydään ratkaisu yhdessä läpi tunnilla.
+
+Tässä harjoituksessa toteutetaan Kivi - Paperi - Sakset - peli. Pelissä kaksi pelaajaa
+valitsee yhtä aikaa yhden kolmesta vaihtoehdosta, kiven, paperin tai sakset. Pelin
+voittoehdot ovat seuraavat:
+- Mikäli molemmat pelaajat valitsevat saman vaihtoehdon, peli päättyy tasapeliin
+- Kivi voittaa sakset
+- Paperi voittaa kiven
+- Sakset voittaa paperin
+
+Tässä harjoituksessa yksi ihmispelaaja pelaa tietokonetta vastaan. Kumpikin pelaaja valitsee
+kiven, paperin tai sakset. Ihmispelaajan valinta luetaan komentoriviltä. Tietokonepelaaja
+tekee oman valintansa satunnaisesti. Kummankin pelaajan valinnat luetaan pääohjelmassa(main).
+Näitä valintoja verrataan toisiinsa ja pelin voittaja valitaan yllä kuvattujen voittoehtojen mukaan.
+Pelin päättyessä sovellus kysyy pelaajalta, aloitetaanko uusi peli vai päätetäänkö sovellus.
+Jos pelaaja päättää aloittaa uuden pelin, peli alkaa alusta. Muuten sovellus suljetaan.
+
+Luokka Player toimii kantaluokkana ihmis - ja tietokonepelaajille. Luokka on toteutettu
+player.py -tiedostossa.
+
+
+Määritä luokat HumanPlayer ja CPUPlayer siten, että ne periytyvät Player - luokasta ja
+ylikirjoittavat play - funktion. Play - funktio palauttaa pelaajan tekemän valinnan
+(kivi, paperi tai sakset).
+
+Alla sovelluksen esimerkkiajo(konsolin tulosteet):
+
+.\RockPaperScissors\rps.py
+Give your name: Pelaaja
+Give your choice(1=Rock, 2=Paper, 3=Sicssors): 1
+Pelaaja ROCK
+CPU SCISSORS
+Pelaaja wins!
+Play again(y / n) y
+Give your choice(1=Rock, 2=Paper, 3=Sicssors): 3
+Pelaaja SCISSORS
+CPU ROCK
+CPU wins!
+Play again(y / n) n
