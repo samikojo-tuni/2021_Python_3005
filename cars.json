@@ -1,0 +1,14 @@
+[
+  {
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2010,
+    "price": 6502.15
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus",
+    "year": 2000,
+    "price": 1500.0
+  }
+]
