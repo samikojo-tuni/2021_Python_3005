@@ -1,0 +1,35 @@
+Vehicle-tehtävä koostuu kahdesta harjoituksesta. Ensimmäisessä määritetään luokat, jotka määrittävät
+ajoneuvojen ominaisuudet.
+
+Toisessa harjoituksessa toteutamme ajoneuvojen liikuttamisen. Ennen liikuttamisen toteuttamista
+teemme tunnilla yhdessä pelikartan lukemisen tiedostosta ja komentojen lukemisen käyttäjältä.
+
+
+Harjoitus 1:
+- Deadline: 8.4. klo 12
+- palautus: sami.kojo@tuni.fi (zip-paketissa)
+
+Moduulissa vehicle on määritetty luokka Vehicle. Peri tästä luokasta seuraavat ajoneuvot:
+- Car
+  - Nimi: Auto
+	- Symboli: A
+	- Sallitut maastot: Terrain.GROUND
+	- Nopeus: 2
+- Plane:
+  - Nimi: Lentokone
+	- Symboli: L
+	- Sallitut maastot; Terrain.GROUND, Terrain.WATER (koska lentokone lentää näiden yllä :))
+	- Nopeus: 3
+- Boat:
+  - Nimi: Vene
+	- Symboli: V
+	- Sallitut maastot: Terrain.WATER
+	- Nopeus: 1
+
+Harjoituksessa tulee siis määrittää kullekin luokalle rakentaja ja ylikirjoittaa Vehicle-luokan 
+kaikki muut jäsenfunktiot paitsi Move.
+
+Harjoitus 2:
+- Julkaistaan 8.4.
+- Deadline 15.4.
+- palautus: sami.kojo@tuni.fi (zip-paketissa)
