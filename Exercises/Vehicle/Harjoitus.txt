@@ -33,3 +33,12 @@ Harjoitus 2:
 - Julkaistaan 8.4.
 - Deadline 15.4.
 - palautus: sami.kojo@tuni.fi (zip-paketissa)
+
+Harjoitus 2:ssa toteutetaan ajoneuvon liikkuminen toteuttamalla Vehicle-luokkaan Move-funktio.
+Move liikuttaa ajoneuvoa haluttuun suuntaan, mutta vain, jos kyseisessä suunnassa on sallittua maastoa.
+Kohdekoordinaatti riippuu ajoneuvon nopeudesta. Osa ajoneuvoista voi liikkua vain tietynlaisessa 
+maastossa. Varmista, että ajoneuvo ei liiku sellaiseen maastoon, jossa se ei voi kulkea.
+Ajoneuvo liikkuu sen nopeuden määrittämän määrän ruutuja vuoron aikana suuntaan direction, mutta
+kuitenkin siten, että se ei päädy koskaan sellaiselle maastolle, missä se ei voi kulkea.
+Esimerkiksi jos ajoneuvon nopeus on kaksi, mutta kulkusuunnassa on vain yksi ruutu maastoa, jossa
+ajoneuvo voi kulkea, liikkuu ajoneuvo vain yhden ruudun.
