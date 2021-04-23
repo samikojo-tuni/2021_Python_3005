@@ -16,3 +16,30 @@ fizz_buzz(5) ➞ "Buzz"
 fizz_buzz(15) ➞ "FizzBuzz"
 fizz_buzz(4) ➞ "4"
 '''
+
+def fizz_buzz(number):
+  # Virhetarkastelu
+  try:
+    number = int(number)
+  except ValueError:
+    print("Parametri ei ollut numero")
+    return
+
+  output = ""
+  if number % 3 == 0:
+    output += "Fizz"
+  if number % 5 == 0:
+    output += "Buzz"
+
+  if output == "":
+    output = str(number)
+
+  return output
+
+def main():
+  for i in range(1, 21):
+    print(fizz_buzz(i))
+
+
+if __name__ == "__main__":
+  main()
