@@ -45,6 +45,15 @@ class Point:
     self.x = x
     self.y = y
 
+  def __add__(self, other):
+    return Point(self.x + other.x, self.y + other.y)
+
+  def __sub__(self, other):
+    return Point(self.x - other.x, self.y - other.y)
+
+  def __str__(self):
+    return f"{self.x}, {self.y}"
+
 class Rectangle(Shape):
   def __init__(self, bottomLeft, topRight):
     self.bottomLeft = bottomLeft
@@ -61,10 +70,20 @@ class Rectangle(Shape):
 
 
 # Testataan toteutusta
-topRight = Point(5, 10)
-bottomLeft = Point(0, 0)
-rectangle = Rectangle(bottomLeft, topRight)
+# topRight = Point(5, 10)
+# bottomLeft = Point(0, 0)
+# rectangle = Rectangle(bottomLeft, topRight)
 
-print("Leveys", rectangle.width())
-print("Korkeus", rectangle.height())
-print("Pinta-ala", rectangle.area())
+# print("Leveys", rectangle.width())
+# print("Korkeus", rectangle.height())
+# print("Pinta-ala", rectangle.area())
+
+num1 = 1
+num2 = 2
+print(num1 + num2)
+
+p1 = Point(1, 0)
+p2 = Point(4, 2)
+
+print(p1 + p2)
+print(p1 - p2)
